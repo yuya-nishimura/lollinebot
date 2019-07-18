@@ -36,10 +36,13 @@ class LinebotController < ApplicationController
         case event.type
         when Line::Bot::Event::MessageType::Text
           # 送られてきたテキストの内容をチェック
-          if event.message['text'].eql?("Hello")
-            # privateメソッドのtemplateを呼び出して応答を行う
-            # この時eventオブジェクトに含まれているreplyTokenを使用する
-            client.reply_message(event['replyToken'], template)
+          text = event.message['text']
+
+          reply = create_reply_message(text)
+
+          # privateメソッドのtemplateを呼び出して応答を行う
+          # この時eventオブジェクトに含まれているreplyTokenを使用する
+          client.reply_message(event['replyToken'], reply)
           end
         end
       end
@@ -52,25 +55,29 @@ class LinebotController < ApplicationController
   private
 
   # 応答用のメッセージテンプレート
-  def template
-    {
-      "type": "template",
-      "altText": "This is a confirm message.",
-      "template": {
-          "type": "confirm",
-          "text": "こんにちは",
-          "actions": [
-            { "type": "message",
-              "label": "YES",
-              "text": "yes"
-            },
-            { "type": "message",
-              "label": "NO",
-              "text": "no"
-            }
-          ]
-        }
-    }
+  def create_reply_message(text)
+
+    idol = Idol.find_by(name: text)
+    reply_message = {}
+
+    if !idol.nil?
+      reply_message = {
+        "type": "text",
+        "text":
+          "名前: #{idol.name}\n
+          年齢: #{idol.age}歳\n
+          誕生日: #{idol.birth}\n
+          身長: #{idol.height}cm\n
+          体重: #{idol.weight}kg\n
+          利き手: #{idol.handed}\n
+          3サイズ: #{idol.bwh.join(",")}"
+      }
+    else
+      reply_message = {
+        "type": "text",
+        "text": "……"
+      }
+    end
   end
 
 end

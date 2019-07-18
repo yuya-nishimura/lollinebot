@@ -26,4 +26,4 @@
 .env
 
 # vscodeの設定無視
-/.vscode/*
+#/.vscode/*

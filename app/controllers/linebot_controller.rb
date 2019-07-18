@@ -56,10 +56,10 @@ class LinebotController < ApplicationController
   def template
     {
       "type": "template",
-      "altText": "This is a confirm message."
+      "altText": "This is a confirm message.",
       "template": {
-          "type": "confirm"
-          "text": "こんにちは"
+          "type": "confirm",
+          "text": "こんにちは",
           "actions": [
             { "type": "message",
               "label": "YES",

@@ -63,13 +63,15 @@ class LinebotController < ApplicationController
       reply_message = {
         "type": "text",
         "text":
-          "名前: #{idol.name}\n
+        <<-IDOL
+          名前: #{idol.name}\n
           年齢: #{idol.age}歳\n
           誕生日: #{idol.birth}\n
           身長: #{idol.height}cm\n
           体重: #{idol.weight}kg\n
           利き手: #{idol.handed}\n
-          3サイズ: #{idol.bwh}"
+          3サイズ: #{idol.bwh}
+        IDOL
       }
     else
       reply_message = {

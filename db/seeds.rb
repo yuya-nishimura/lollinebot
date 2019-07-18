@@ -13,5 +13,5 @@ Idol.create!(
   height: 153
   weight: 40
   handed: "右"
-  bwh: [77, 54, 79]
+  bwh: "77-54-79"
 )

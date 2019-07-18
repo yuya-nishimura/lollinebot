@@ -7,7 +7,7 @@ class CreateIdol < ActiveRecord::Migration[5.2]
       t.integer :height
       t.integer :weight
       t.string :handed
-      t.array :bwh
+      t.string :bwh
     end
   end
 end

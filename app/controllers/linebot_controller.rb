@@ -69,7 +69,7 @@ class LinebotController < ApplicationController
           身長: #{idol.height}cm\n
           体重: #{idol.weight}kg\n
           利き手: #{idol.handed}\n
-          3サイズ: #{idol.bwh.join(",")}"
+          3サイズ: #{idol.bwh}"
       }
     else
       reply_message = {

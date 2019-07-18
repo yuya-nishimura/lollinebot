@@ -43,7 +43,6 @@ class LinebotController < ApplicationController
           # privateメソッドのtemplateを呼び出して応答を行う
           # この時eventオブジェクトに含まれているreplyTokenを使用する
           client.reply_message(event['replyToken'], reply)
-          end
         end
       end
     }

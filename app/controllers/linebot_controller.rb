@@ -1,6 +1,5 @@
 class LinebotController < ApplicationController
   require 'line/bot'
-  protect_from_forgery :except => [:callback]
 
   # 環境変数に設定した情報を元にクライアントオブジェクトを作成
   # ここで設定したシークレットが署名チェックのところで使われている

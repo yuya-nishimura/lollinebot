@@ -17,10 +17,6 @@ Idol.create(
   bwh: "77-54-79"
 )
 
-idol_data.each do |data|
-  create(data)
-end
-
 idol_data = [
   { name: "永吉昴", 　　age: 15, birth: Date.new(9999,9,20), height: 154, weight: 41, handed: "左", bwh: "79-59-78" },
   { name: "七尾百合子", age: 15, birth: Date.new(9999,3,18), height: 154, weight: 41, handed: "右", bwh: "78-56-80" },
@@ -46,3 +42,7 @@ idol_data = [
   { name: "島原エレナ", age: 17, birth: Date.new(9999,10,26), height: 160, weight: 47, handed: "右", bwh: "85-58-86" },
   { name: "佐竹美奈子", age: 18, birth: Date.new(9999,3,22), height: 158, weight: 45, handed: "右", bwh: "86-54-82" },
 ]
+
+idol_data.each do |data|
+  create(data)
+end

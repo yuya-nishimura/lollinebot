@@ -62,16 +62,15 @@ class LinebotController < ApplicationController
     if !idol.nil?
       reply_message = {
         "type": "text",
-        "text":
-        <<-IDOL
-        名前: #{idol.name}
-        年齢: #{idol.age}歳
-        誕生日: #{idol.birth}
-        身長: #{idol.height}cm
-        体重: #{idol.weight}kg
-        利き手: #{idol.handed}
-        3サイズ: #{idol.bwh}
-        IDOL
+        "text":　<<-IDOL
+                名前: #{idol.name}
+                年齢: #{idol.age}歳
+                誕生日: #{idol.birth.month}月 #{idol.birth.day}日
+                身長: #{idol.height}cm
+                体重: #{idol.weight}kg
+                利き手: #{idol.handed}
+                3サイズ: #{idol.bwh}
+                IDOL
       }
     else
       reply_message = {

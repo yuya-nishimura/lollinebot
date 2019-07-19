@@ -43,6 +43,14 @@ class LinebotController < ApplicationController
           # privateメソッドのtemplateを呼び出して応答を行う
           # この時eventオブジェクトに含まれているreplyTokenを使用する
           client.reply_message(event['replyToken'], reply)
+        when Line::Bot::Event::MessageType::Sticker
+          testtext = <<~EOS
+                #{event.message['type']}
+                #{event.message['packageId']}
+                #{event.message['stickerId']}
+                EOS
+
+          client.reply_message(event['replyToken'], testtext)
         end
       end
     }
@@ -69,7 +77,7 @@ class LinebotController < ApplicationController
                 体重: #{idol.weight}kg
                 利き手: #{idol.handed}
                 3サイズ: #{idol.bwh}
-              IDOL
+                IDOL
       }
     else
       reply_message = {

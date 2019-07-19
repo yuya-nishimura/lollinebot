@@ -24,3 +24,4 @@
 
 # 環境変数を無視する
 .env
+.rubocop.yml

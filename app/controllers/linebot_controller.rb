@@ -57,7 +57,6 @@ class LinebotController < ApplicationController
   def create_reply_message(text)
 
     idol = Idol.find_by(name: text)
-    reply_message = {}
 
     if !idol.nil?
       reply_message = {
@@ -70,7 +69,7 @@ class LinebotController < ApplicationController
                 体重: #{idol.weight}kg
                 利き手: #{idol.handed}
                 3サイズ: #{idol.bwh}
-                IDOL
+              IDOL
       }
     else
       reply_message = {
@@ -79,5 +78,4 @@ class LinebotController < ApplicationController
       }
     end
   end
-
 end

@@ -61,7 +61,7 @@ class LinebotController < ApplicationController
 
     if !idol.nil?
 
-      idol_profile = <<-IDOL
+      profile = <<-IDOL
       名前: #{idol.name}
       年齢: #{idol.age}歳
       誕生日: #{idol.birth.month}月#{idol.birth.day}日
@@ -73,7 +73,7 @@ class LinebotController < ApplicationController
 
       reply_message = {
         "type": "text",
-        "text":　idol_profile
+        "text":　profile
       }
     else
       reply_message = {

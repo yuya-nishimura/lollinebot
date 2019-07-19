@@ -44,5 +44,5 @@ idol_data = [
 ]
 
 idol_data.each do |data|
-  create(data)
+  Idol.create(data)
 end

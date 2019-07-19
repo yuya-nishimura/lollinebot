@@ -61,7 +61,7 @@ class LinebotController < ApplicationController
 
     if !idol.nil?
 
-      profile = <<-IDOL
+      idol_profile = <<-IDOL
       名前: #{idol.name}
       年齢: #{idol.age}歳
       誕生日: #{idol.birth.month}月#{idol.birth.day}日
@@ -71,15 +71,11 @@ class LinebotController < ApplicationController
       3サイズ: #{idol.bwh}
       IDOL
 
-      reply_message = {
-        "type": "text",
-        "text":　profile
-      }
+      reply_message["type"] = "text"
+      reply_message["text"] = idol_profile
     else
-      reply_message = {
-        "type": "text",
-        "text": "……"
-      }
+      reply_message["type"] = "text"
+      reply_message["text"] = "……"
     end
   end
 

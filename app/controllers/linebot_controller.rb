@@ -74,7 +74,7 @@ class LinebotController < ApplicationController
       }
     else
       reply_message = {
-        "type": "text"
+        "type": "text",
         "text": "……"
       }
     end

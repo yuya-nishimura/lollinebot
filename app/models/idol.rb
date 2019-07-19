@@ -1,3 +1,3 @@
 class Idol < ApplicationRecord
-  validates name: :unique
+  validates :name, unique: true
 end

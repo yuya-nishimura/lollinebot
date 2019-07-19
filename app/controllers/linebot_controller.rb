@@ -64,12 +64,12 @@ class LinebotController < ApplicationController
         "type": "text",
         "text":
         <<-IDOL
-        名前: #{idol.name}\n
-        年齢: #{idol.age}歳\n
-        誕生日: #{idol.birth}\n
-        身長: #{idol.height}cm\n
-        体重: #{idol.weight}kg\n
-        利き手: #{idol.handed}\n
+        名前: #{idol.name}
+        年齢: #{idol.age}歳
+        誕生日: #{idol.birth}
+        身長: #{idol.height}cm
+        体重: #{idol.weight}kg
+        利き手: #{idol.handed}
         3サイズ: #{idol.bwh}
         IDOL
       }

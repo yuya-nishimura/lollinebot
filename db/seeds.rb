@@ -18,9 +18,9 @@ Idol.create(
 )
 
 idol_data = [
-  { name: "永吉昴", 　　age: 15, birth: Date.new(9999,9,20), height: 154, weight: 41, handed: "左", bwh: "79-59-78" },
+  { name: "永吉昴",     age: 15, birth: Date.new(9999,9,20), height: 154, weight: 41, handed: "左", bwh: "79-59-78" },
   { name: "七尾百合子", age: 15, birth: Date.new(9999,3,18), height: 154, weight: 41, handed: "右", bwh: "78-56-80" },
-  { name: "ロコ", 　　　age: 15, birth: Date.new(9999,3,1), height: 154, weight: 42, handed: "右", bwh: "78-57-77" },
+  { name: "ロコ",     age: 15, birth: Date.new(9999,3,1), height: 154, weight: 42, handed: "右", bwh: "78-57-77" },
   { name: "望月杏奈",  age: 14, birth: Date.new(9999,5,31), height: 152, weight: 41, handed: "右", bwh: "78-53-79" },
   { name: "天空橋朋花", age: 15, birth: Date.new(9999,11,11), height: 156, weight: 41, handed: "左", bwh: "80-56-79" },
   { name: "天海春香",   age: 17, birth: Date.new(9999,4,3), height: 158, weight: 46, handed: "右", bwh: "83-56-82" },
